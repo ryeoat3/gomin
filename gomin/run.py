@@ -9,7 +9,7 @@ import torch
 
 from . import config
 from . import models
-from .utils import AUDIO_EXTS, MEL_EXTS, device_type
+from .utils import AUDIO_EXTS, MEL_EXTS, device_type, preprocess_inout_files
 
 
 def load_audio(
@@ -102,6 +102,8 @@ def analysis_synthesis(
                 f"Wrong `hop_length`. expected [{model.hop_length}], got"
                 f" [{melspec_dict['hop_length']}]."
             )
+    else:
+        print(f"Unsupported input file extension: {input_ext} for {in_file}.")
 
     if output_ext in MEL_EXTS:
         assert output_ext == ".pt", (
@@ -125,6 +127,8 @@ def analysis_synthesis(
         f" '{output_ext}'."
         recon_audio = _synthesis(model, melspec, device=device)
         sf.write(out_file, recon_audio, model.sample_rate, subtype="PCM_16")
+    else:
+        print(f"Unsupported output file extension: {output_ext} for {out_file}.")
 
 
 def parse_args():
@@ -219,6 +223,9 @@ def process(model, device, input_files, output_files):
 
 def main():
     args = parse_args()
+    args.input_files, args.output_files = preprocess_inout_files(
+        args.input_files, args.output_files
+    )
 
     if args.model == "gan":
         model = models.GomiGAN.from_pretrained(
