@@ -17,12 +17,12 @@ This makes GOMIN suitable for various applications and research endeavors.
 The avaiable models are based on two state-of-the-art neural vocoder models; BigVGAN \[[Lee et al. 2022](https://arxiv.org/abs/2206.04658)\] and DiffWave \[[Kong et al. 2020](https://arxiv.org/abs/2009.09761)\].
 These models have been slightly modified to improve their performance in generating general audio signals beyond just speech signals.
 
-The BigVGAN-based models have been enhanced with Feature-wise Linear Modulation (FiLM) \[[Perez et al. 2017](https://arxiv.org/abs/1709.07871)\] after every upsampling block.
+The GAN-based models have been enhanced with Feature-wise Linear Modulation (FiLM) \[[Perez et al. 2017](https://arxiv.org/abs/1709.07871)\] after every upsampling block.
 The modulation parameters, i.e. shift and scale parameters, are calculated from the raw melspectrogram and each upsampling layer has distinct parameters, meaning that the parameters are not shared. 
 This modification improves tonal consistency and leads to better sound reconstruction for general audio signals.
 Note that code for this model is largely brought from [HiFi-GAN]((https://github.com/jik876/hifi-gan)) \[[Kong et al. 2020](https://arxiv.org/abs/2010.05646)\], not directly from [BigVGAN](https://github.com/NVIDIA/BigVGAN) repository.
 
-For DiffWave-based models, in addition to the FiLM, we have also fine-tuned its noise schedule to better accommodate universal audio generation.
+For Diffusion-based models, in addition to the FiLM, we have also fine-tuned its noise schedule to better accommodate universal audio generation.
 This was achieved by interpolating two popular schedules, the linear and cosine schedule.
 The interpolated schedule roughly follows the linear schedule near $t=0$ and the cosine schedule near $t=T$.
 This noise schedule injects more noise in earlier steps, helping the model to handle more diverse and complex data distributions. 
