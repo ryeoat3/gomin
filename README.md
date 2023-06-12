@@ -20,7 +20,7 @@ These models have been slightly modified to improve their performance in generat
 The GAN-based models have been enhanced with Feature-wise Linear Modulation (FiLM) \[[Perez et al. 2017](https://arxiv.org/abs/1709.07871)\] after every upsampling block.
 The modulation parameters, i.e. shift and scale parameters, are calculated from the raw melspectrogram and each upsampling layer has distinct parameters, meaning that the parameters are not shared. 
 This modification improves tonal consistency and leads to better sound reconstruction for general audio signals.
-Note that code for this model is largely brought from [HiFi-GAN]((https://github.com/jik876/hifi-gan)) \[[Kong et al. 2020](https://arxiv.org/abs/2010.05646)\], not directly from [BigVGAN](https://github.com/NVIDIA/BigVGAN) repository.
+Note that code for this model is largely brought from [HiFi-GAN](https://github.com/jik876/hifi-gan) \[[Kong et al. 2020](https://arxiv.org/abs/2010.05646)\], not directly from [BigVGAN](https://github.com/NVIDIA/BigVGAN) repository.
 
 For Diffusion-based models, in addition to the FiLM, we have also fine-tuned its noise schedule to better accommodate universal audio generation.
 This was achieved by interpolating two popular schedules, the linear and cosine schedule.
@@ -29,7 +29,7 @@ This noise schedule injects more noise in earlier steps, helping the model to ha
 Research has shown that the use of noise schedules is crucial in high-resolution image generation \[[Chen 2023](https://arxiv.org/abs/2301.10972), [Hoogeboom et al. 2023](https://arxiv.org/abs/2301.11093)\].
 We believe that further research in this area will lead to even better audio generation in the future.
 
----
+
 ## Requirements
 
 - python3    >= 3.10
@@ -43,7 +43,7 @@ We believe that further research in this area will lead to even better audio gen
 - soundfile  >= 0.11.0
 - tqdm
 
----
+
 ## Install
 You can install this package using following command.
 ```
@@ -52,12 +52,12 @@ $ cd gomin
 $ pip install -e .
 ```
 
----
+
 ## Pretrained checkpoint
 
 You can download pretrained checkpoint from google drive ([gan](https://drive.google.com/file/d/1TyNCS7fdeeCJK66x_n9TeR_SurPaft4L), [diffusion](https://drive.google.com/file/d/1vkrTICKruShu_0ofM3vTc3No2Fj5rMxD)).
 
----
+
 ## Inference
 
 ### Python
@@ -111,7 +111,7 @@ Extensions of `input_files` and `output_files` will determine which process to r
 - Synthesis
     - If `input_files` are `.pt` files and `output_files` are audio files, this program will reconstruct mel-spectrogram into waveform.
 
----
+
 ## References
 - [Lee et al. 2022](https://arxiv.org/abs/2206.04658): Sang-gil Lee, Wei Ping, Boris Ginsburg, Bryan Catanzaro, Sungroh Yoon, "BigVGAN: A Universal Neural Vocoder with Large-Scale Training"
 - [Kong et al. 2020](https://arxiv.org/abs/2009.09761): Zhifeng Kong, Wei Ping, Jiaji Huang, Kexin Zhao, Bryan Catanzaro, "DiffWave: A Versatile Diffusion Model for Audio Synthesis"
@@ -123,7 +123,7 @@ Extensions of `input_files` and `output_files` will determine which process to r
 - HiFi-GAN: https://github.com/jik876/hifi-gan
 - DiffWave: https://github.com/lmnt-com/diffwave
 
----
+
 ## How to cite
 If you find this work useful, please refer this:
 ```
@@ -134,6 +134,6 @@ If you find this work useful, please refer this:
     year = {2023},
 }
 ```
----
+
 ## License
 [MIT License](LICENSE)
