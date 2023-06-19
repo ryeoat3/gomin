@@ -127,11 +127,13 @@ Extensions of `input_files` and `output_files` will determine which process to r
 ## How to cite
 If you find this work useful, please refer this:
 ```
-@article{gaudio2023falle,
-    title = {FALL-E: Gaudio Foley Synthesis System},
-    author = {Kang, Minsung and Oh, Sangshin and Moon, Hyeongi and Lee, Kyungyun and Chon, Ben Sangbae},
-    journal = {Detection and Classification of Acoustic Scenes and Events (DCASE) 2023, Challenge Task7},
-    year = {2023},
+@misc{kang2023falle,
+    title={FALL-E: A Foley Sound Synthesis Model and Strategies},
+    author={Minsung Kang and Sangshin Oh and Hyeongi Moon and Kyungyun Lee and Ben Sangbae Chon},
+    year={2023},
+    eprint={2306.09807},
+    archivePrefix={arXiv},
+    primaryClass={eess.AS}
 }
 ```
 
