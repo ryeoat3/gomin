@@ -14,7 +14,7 @@ This makes GOMIN suitable for various applications and research endeavors.
 
 ### Supported models
 
-The avaiable models are based on two state-of-the-art neural vocoder models; BigVGAN \[[Lee et al. 2022](https://arxiv.org/abs/2206.04658)\] and DiffWave \[[Kong et al. 2020](https://arxiv.org/abs/2009.09761)\].
+The available models are based on two state-of-the-art neural vocoder models; BigVGAN \[[Lee et al. 2022](https://arxiv.org/abs/2206.04658)\] and DiffWave \[[Kong et al. 2020](https://arxiv.org/abs/2009.09761)\].
 These models have been slightly modified to improve their performance in generating general audio signals beyond just speech signals.
 
 The GAN-based models have been enhanced with Feature-wise Linear Modulation (FiLM) \[[Perez et al. 2017](https://arxiv.org/abs/1709.07871)\] after every upsampling block.
