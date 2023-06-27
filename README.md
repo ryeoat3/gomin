@@ -127,6 +127,7 @@ Extensions of `input_files` and `output_files` will determine which process to r
 ## How to cite
 If you find this work useful, please refer this:
 ```
+# Workshop paper submitted to DCASE Workshop 2023
 @misc{kang2023falle,
     title={FALL-E: A Foley Sound Synthesis Model and Strategies},
     author={Minsung Kang and Sangshin Oh and Hyeongi Moon and Kyungyun Lee and Ben Sangbae Chon},
@@ -134,6 +135,15 @@ If you find this work useful, please refer this:
     eprint={2306.09807},
     archivePrefix={arXiv},
     primaryClass={eess.AS}
+}
+
+# or technical report for DCASE Challenge 2023 Task7
+@techreport{ChonGLI2023,
+    Author = "Kang, Minsung and Oh, Sangshin and Moon, Hyeongi and Lee, Kyungyun and Chon, Ben Sangbae",
+    title = "FALL-E: Gaudio Foley Synthesis System",
+    institution = "Gaudio Lab, Inc., Seoul, South Kore",
+    year = "2023",
+    month = "June",
 }
 ```
 
