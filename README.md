@@ -69,7 +69,7 @@ You can download pretrained checkpoint from google drive ([gan](https://drive.go
 >>> model = GomiGAN.from_pretrained(
   pretrained_model_path="CHECKPOINT PATH", **GANConfig().__dict__
 )  # for GAN model
->>> model = GomiDiff.from_pretrained(
+>>> model = DiffusionWrapper.from_pretrained(
   pretrained_model_path="CHECKPOINT_PATH", **DiffusionConfig().__dict__
 )  # for diffusion model
 
