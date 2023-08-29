@@ -32,15 +32,15 @@ We believe that further research in this area will lead to even better audio gen
 
 ## Requirements
 
-- python3    >= 3.10
+- python3    &ge; 3.10
 - torch      (tested on 1.13.1+cu116)
 - torchaudio (tested on 0.13.1+cu116)
 - diffusers  (tested on 0.17.0)
-- librosa    >= 0.9.2
+- librosa    &ge; 0.9.2
 - numpy      == 1.24.3
 - pyyaml
-- scipy      >= 1.10.0
-- soundfile  >= 0.11.0
+- scipy      &ge; 1.10.0
+- soundfile  &ge; 0.11.0
 - tqdm
 
 
@@ -127,23 +127,13 @@ Extensions of `input_files` and `output_files` will determine which process to r
 ## How to cite
 If you find this work useful, please refer this:
 ```bibtex
-# Workshop paper submitted to DCASE Workshop 2023
-@misc{kang2023falle,
-    title={FALL-E: A Foley Sound Synthesis Model and Strategies},
-    author={Minsung Kang and Sangshin Oh and Hyeongi Moon and Kyungyun Lee and Ben Sangbae Chon},
-    year={2023},
-    eprint={2306.09807},
-    archivePrefix={arXiv},
-    primaryClass={eess.AS}
-}
-
-# or technical report for DCASE Challenge 2023 Task7
-@techreport{ChonGLI2023,
-    Author = "Kang, Minsung and Oh, Sangshin and Moon, Hyeongi and Lee, Kyungyun and Chon, Ben Sangbae",
-    title = "FALL-E: Gaudio Foley Synthesis System",
-    institution = "Gaudio Lab, Inc., Seoul, South Kore",
+# Workshop paper for DCASE Workshop 2023
+@inproceedings{Kang2023,
+    author = "Kang, Minsung and Oh, Sangshin and Moon, Hyeongi and Lee, Kyungyun and Chon, Ben Sangbae",
+    title = "FALL-E: A Foley Sound Synthesis Model and Strategies",
+    booktitle = "Proceedings of the 8th Detection and Classification of Acoustic Scenes and Events 2023 Workshop (DCASE2023)",
+    address = "Tampere, Finland",
     year = "2023",
-    month = "June",
 }
 ```
 
