@@ -46,7 +46,7 @@ We believe that further research in this area will lead to even better audio gen
 
 ## Install
 You can install this package using following command.
-```
+```Shell
 $ git clone https://github.com/ryeoat3/gomin.git
 $ cd gomin
 $ pip install -e .
@@ -61,7 +61,7 @@ You can download pretrained checkpoint from google drive ([gan](https://drive.go
 ## Inference
 
 ### Python
-```
+```Python
 >>> from gomin.models import GomiGAN, DiffusionWrapper
 >>> from config import GANConfig, DiffusionConfig
 
@@ -83,7 +83,7 @@ You can download pretrained checkpoint from google drive ([gan](https://drive.go
 ```
 
 ### CLI
-```
+```Shell
 $ python -m gomin.run -m {MODEL: 'gan' | 'diffusion'} -p {MODEL_PATH} -i {INPUT_FILES} -o {OUTPUT_FILES}
 ```
 
@@ -126,7 +126,7 @@ Extensions of `input_files` and `output_files` will determine which process to r
 
 ## How to cite
 If you find this work useful, please refer this:
-```
+```bibtex
 # Workshop paper submitted to DCASE Workshop 2023
 @misc{kang2023falle,
     title={FALL-E: A Foley Sound Synthesis Model and Strategies},
