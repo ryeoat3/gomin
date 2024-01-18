@@ -17,12 +17,16 @@ class MelspecInversion(nn.Module):
         sample_rate: int = 24000,
         win_length: int = 1024,
         hop_length: int = 256,
+        f_min: float = 0.0,
+        f_max: float | None = None,
     ):
         super().__init__()
         self.n_mels = n_mels
         self.sample_rate = sample_rate
         self.win_length = win_length
         self.hop_length = hop_length
+        self.f_min = f_min
+        self.f_max = f_max or (self.sample_rate / 2.0)
         self.melspec_layer = None
 
     @classmethod
@@ -39,8 +43,8 @@ class MelspecInversion(nn.Module):
                 n_fft=get_least_power2_above(self.win_length),
                 win_length=self.win_length,
                 hop_length=self.hop_length,
-                f_min=0.0,
-                f_max=(self.sample_rate / 2.0),
+                f_min=self.f_min,
+                f_max=self.f_max,
                 center=True,
                 power=2.0,
                 mel_scale="slaney",
